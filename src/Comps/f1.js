@@ -1,8 +1,13 @@
 import React , {useState} from'react' 
 import './style.css'
-
+import {useDispatch} from 'react-redux'
 export default function F1() {  
-  
+  const displatch=useDispatch()
+  function f2(){
+    displatch({
+      type:"f2"
+    })
+  }
   return ( 
     <div className='f1'> 
       <form action="#" onSubmit={(e)=>{e.preventDefault()}}> 
@@ -42,7 +47,7 @@ export default function F1() {
             </div>
         <div>
           <label htmlFor="">&nbsp;</label>
-          <button type="button">Search</button> 
+          <button type="button" onClick={f2}>Search</button> 
         </div>
       </form> 
     </div> 

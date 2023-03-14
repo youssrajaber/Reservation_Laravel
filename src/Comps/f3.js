@@ -1,8 +1,14 @@
 import React , {useState} from'react' 
 import './style.css'
-
+import {useSelector,useDispatch} from 'react-redux'
 export default function F3() {  
-  
+  const st=useSelector(state=>state.st)
+  const displatch=useDispatch()
+  function f4(){
+    displatch({
+      type:"f4"
+    })
+  }
   return ( 
     <div className='f1'> 
       <form action="#" onSubmit={(e)=>{e.preventDefault()}}> 
@@ -43,7 +49,7 @@ export default function F3() {
         </div>
         <div>
           <label htmlFor="">&nbsp;</label>
-          <button type="button">Continue</button> 
+          <button type="button" onClick={f4}>Continue</button> 
         </div>
       </form> 
     </div> 

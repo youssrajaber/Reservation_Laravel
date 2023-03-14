@@ -661,10 +661,15 @@ nav .btn{
     grid-template-columns: repeat(4,1fr);
     background-color: #1882fc;
     color: white;
+    padding: 0px;
 }
 
 .reservation .nav div{
     border-left: .1px solid rgba(255, 255, 255, 0.205) ;
+}
+.reservation .nav .active{
+    background-color: #003266;
+    height: 100%;
 }
 .f1
 {
