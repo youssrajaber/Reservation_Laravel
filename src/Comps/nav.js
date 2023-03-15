@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../img/Static.png'
 import { Link } from 'react-router-dom'
 import './style.css'
 export default function Nav() {
@@ -6,7 +7,7 @@ export default function Nav() {
         <div>
             <nav>
                 <section>
-                    <Link to="/Landing" className="nav-brand">North Flights</Link>
+                    <Link to="/Landing" className="nav-brand"><img className='logo' src={logo} alt="" /></Link>
                     <div>
                         <Link to="/Landing">About</Link>
                         <Link to="/Landing">Contact</Link>

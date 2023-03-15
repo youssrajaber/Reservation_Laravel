@@ -11,8 +11,6 @@ import {useSelector,useDispatch} from 'react-redux'
 
 
 export default function Landing() {
-    const st=useSelector(state=>state.st)
-    const displatch=useDispatch()
     const ref1=useRef()
     const ref2=useRef()
     const ref3=useRef()
@@ -92,13 +90,6 @@ export default function Landing() {
         }
     })
   
-    function f1(){
-        alert(st)
-        displatch({
-          type:"f1"
-        })
-        alert(st)
-    }
     return (
       <div>
         <section className="hero-bg"> 
@@ -111,7 +102,7 @@ export default function Landing() {
                         Porro ex aperiam totam praesentium aliquid 
                         corrupti dolore obcaecati ipsam assumenda dicate!
                     </h3>
-                    <Link to="/res"className="op" onClick={f1}>Search for Flights</Link>
+                    <Link to="/res"className="op">Search for Flights</Link>
                 </div>
             </section>
         </section>

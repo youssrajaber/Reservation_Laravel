@@ -46,12 +46,13 @@ nav .btn{
     padding: 5px 20px;
     border-radius: 4px;
 }
-.nav-brand{
-    border: 1px solid #1882fc;
-    color: white;
-    padding: 5px;
-    text-shadow: 1px 1px 1px black;
-    font-weight: 900;
+nav .nav-brand{
+    display: grid;
+    align-items: center;
+}
+nav .logo{
+    width: 44px;
+    height: auto;
 }
 
 /* ----------------------hero-------------------- */
@@ -739,31 +740,207 @@ nav .btn{
     box-shadow: 1px 7px 20px hsl(0, 0%, 65%);
     width: 300px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     text-align: start;
     padding: 10px;
-    cursor: pointer;
-    transition: all .2s ease;
+    position: relative;
 }
-.f2 span:hover{
-    background-color: #eaf0fa;
+.f2 span div{
+    display: grid;
+    grid-template-columns: 18px 1fr 80px;
+    justify-content: space-between;
+    margin-top: 10px;
 }
-.f2 span h2{
-    grid-column: 1/3;
-    text-align: center;
-    width: 100%;
+.f2 span .card{
+    display: flex;
+    justify-content: space-between;
+}
+.f2 span div.first{
+    margin-bottom: 55px;
+}
+.f2 span h3,p{
     margin: 0px;
-    margin-bottom: 5px;
-}
-.f2 span div:last-child{
-    grid-column: 1/3;
-}
-.f2 span h3{
-    margin-bottom: 3px;
+    font-weight: 100;
 }
 .f2 span p{
-    margin: 5px;
+    font-weight: 600;
 }
+.f2 span small{
+    font-weight: 100;
+}
+.f2 span i{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 1px solid #c4cdde;
+    margin-top: 9px;
+}
+.f2 span .departure{
+    background-color:  #c4cdde;
+}
+.f2 span div div{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    background-color: #c4cdde;
+    box-sizing: border-box;border-radius: 4px;
+    width: 45%;
+}
+.f2 button{
+    border: none;
+    background-color: #1882fc;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: white;
+    font-size: 1em;
+    padding-block: 8px;
+    cursor: pointer;
+}
+
+.ticket{
+    width: 100%;
+    max-width: 1340px;
+    display: grid;
+    align-items: center;
+    margin: auto;
+    margin-top: 7vh;
+}
+.ticket h1{
+    width: 100%;
+    background-color: #1882fc;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.ticket img{
+    width: 100%;
+    height: auto;
+}
+.ticket main{
+    width: 1000px;
+    margin: auto;
+    background-color: white;
+    box-sizing: border-box;border-radius: 4px;
+    box-shadow: 1px 7px 20px hsl(0, 0%, 65%);
+    display:  grid;
+    grid-template-columns: 1px 1fr 5px 300px;
+    grid-template-rows: 5vh 10vh 20vh 15vh;
+}
+.ticket header{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    text-align: start;
+    gap: 10px;
+    padding: 10px;
+}
+.ticket .cut{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content:space-between ;
+    grid-column: 3/4;
+    grid-row: 1/5;
+    background:url(../img/cut.png) ;
+    background-position: center;
+    background-size: cover;
+}
+.ticket .cut i{
+    width: 100%;
+    background-color: #c4cdde;
+    height: 2vh;
+}
+.ticket main aside:first-child{
+    grid-row: 1/5;
+}
+.ticket main aside:last-child{
+    grid-column: 4/5;
+    grid-row: 1/5;
+    background-color: #1882fc;
+    color: white;
+    border-radius: 0px 4px 4px 0px;
+    display: grid;
+    grid-template-columns: 210px 90px;
+    grid-template-rows: 5vh 1fr;
+}
+.ticket main aside:last-child div:first-child{
+    grid-column: 1/3;
+}
+.ticket main aside:last-child  div{
+    text-align: start;
+    display: grid;
+    align-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.ticket main aside:last-child  div aside{
+    display: flex;
+    justify-content: space-between;
+}
+.ticket main aside:last-child  div aside span{
+    margin-right: auto;
+}
+.ticket .vertical{
+    display: grid;
+    justify-content: center;
+    align-content:space-between;
+}
+.ticket .vertical strong{
+    writing-mode: vertical-rl;
+    margin: 0px;
+}
+.ticket .vertical img{
+    width: 30px;
+    writing-mode: vertical-rl;
+}
+.ticket main article{
+    grid-row: 2/5;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 10vh 1fr 10vh;
+    padding: 10px;
+}
+.ticket main article div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.ticket article span{
+    margin-right: auto;
+    text-align: start;
+}
+.ticket main aside:last-child div.barc{
+    overflow: hidden;
+    padding: 0px;
+}
+.ticket .barc img{
+    width: 100%;
+}
+.ticket h3,p{
+    margin: 0px;
+}
+.ticket strong{
+    font-size: 3em;
+    text-align: start;
+}
+.ticket article div strong:last-child{
+    text-align: end;
+    margin-right: 5px;
+}
+.ticket article div span:last-child{
+    margin-right: 5px;
+}
+.ticket article .flight{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+.ticket article img{
+    width:  20px;
+    margin: auto;
+}
+
 /* ----------------------media query-------------------- */
 @media (max-width:1000px){
     .hero{
@@ -917,5 +1094,48 @@ nav .btn{
     }
     .reservation .nav{
         height: auto;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .reservation .nav div {
+        border-left: none;
+        border-bottom: ;
+    }
+
+    .f2 span {
+        margin-top: 10px;
+    }
+
+    .ticket{
+        display: inline-block;
+    }
+    .ticket main{
+        width: 100%;
+        grid-template-rows: 45px 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .ticket header {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .ticket main article {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .ticket main article div {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        justify-content: space-around;
+      }
+    .ticket main .cut {
+        display: none;
+    }
+    .ticket main aside:last-child {
+        grid-row: 3/5;
+        grid-column: 1/2;
+        grid-template-columns: 1fr 90px;
+    }
+    .ticket strong {
+        font-size: 1.7em;
     }
 }

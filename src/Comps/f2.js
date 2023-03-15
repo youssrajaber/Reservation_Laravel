@@ -13,77 +13,77 @@ export default function F2() {
     <div className='f2'>
       <h2>List Of Flights available</h2>
       <article>
-        <span onClick={f3}>
-          <h2>Flight</h2>
-          <div>
-            <h3>Departure:</h3>
-            <p>Casablanca</p>
+        <span >
+          <h2>Flight Details</h2>
+          <div className='first'>
+            <i className='Boarding'></i>
+            <p>Casablanca,Morocco</p>
+            <p>09:00 PM <br /><small>Boarding</small></p>
           </div>
           <div>
-            <h3>Arrivle:</h3>
-            <p>Paris</p>
+            <i className='departure'></i>
+            <p>Paris,France</p>
+            <p>13:30 PM <br /><small>Departure</small></p>
           </div>
-          <div>
-            <h3>Duration:</h3>
-            <p>4 h</p>
+          <div className='card'>
+            <div>
+              <h3>Passengers:</h3>
+              <p>3</p>
+            </div>
+            <div>
+              <h3>Total:</h3>
+              <p>440$</p>
+            </div>
           </div>
-          <div>
-            <h3>Passengers:</h3>
-            <p>3</p>
-          </div>
-          <div>
-            <hr />
-            <h3>Total:</h3>
-            <p>440$</p>
-          </div>
+          <button onClick={f3}>Select</button>
         </span>
-        <span onClick={f3}>
-          <h2>Flight</h2>
-          <div>
-            <h3>Departure:</h3>
-            <p>Casablanca</p>
+        <span >
+          <h2>Flight Details</h2>
+          <div className='first'>
+            <i className='Boarding'></i>
+            <p>Casablanca,Morocco</p>
+            <p>09:00 PM <br /><small>Boarding</small></p>
           </div>
           <div>
-            <h3>Arrivle:</h3>
-            <p>Paris</p>
+            <i className='departure'></i>
+            <p>Paris,France</p>
+            <p>13:30 PM <br /><small>Departure</small></p>
           </div>
-          <div>
-            <h3>Duration:</h3>
-            <p>4 h</p>
+          <div className='card'>
+            <div>
+              <h3>Passengers:</h3>
+              <p>3</p>
+            </div>
+            <div>
+              <h3>Total:</h3>
+              <p>440$</p>
+            </div>
           </div>
-          <div>
-            <h3>Passengers:</h3>
-            <p>3</p>
-          </div>
-          <div>
-            <hr />
-            <h3>Total:</h3>
-            <p>440$</p>
-          </div>
+          <button onClick={f3}>Select</button>
         </span>
-        <span onClick={f3}>
-          <h2>Flight</h2>
-          <div>
-            <h3>Departure:</h3>
-            <p>Casablanca</p>
+        <span >
+          <h2>Flight Details</h2>
+          <div className='first'>
+            <i className='Boarding'></i>
+            <p>Casablanca,Morocco</p>
+            <p>09:00 PM <br /><small>Boarding</small></p>
           </div>
           <div>
-            <h3>Arrivle:</h3>
-            <p>Paris</p>
+            <i className='departure'></i>
+            <p>Paris,France</p>
+            <p>13:30 PM <br /><small>Departure</small></p>
           </div>
-          <div>
-            <h3>Duration:</h3>
-            <p>4 h</p>
+          <div className='card'>
+            <div>
+              <h3>Passengers:</h3>
+              <p>3</p>
+            </div>
+            <div>
+              <h3>Total:</h3>
+              <p>440$</p>
+            </div>
           </div>
-          <div>
-            <h3>Passengers:</h3>
-            <p>3</p>
-          </div>
-          <div>
-            <hr />
-            <h3>Total:</h3>
-            <p>440$</p>
-          </div>
+          <button onClick={f3}>Select</button>
         </span>
       </article>
       
