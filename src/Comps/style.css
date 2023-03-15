@@ -1098,7 +1098,6 @@ nav .logo{
     }
     .reservation .nav div {
         border-left: none;
-        border-bottom: ;
     }
 
     .f2 span {
@@ -1126,7 +1125,7 @@ nav .logo{
         display: grid;
         grid-template-columns: 2fr 1fr;
         justify-content: space-around;
-      }
+    }
     .ticket main .cut {
         display: none;
     }
