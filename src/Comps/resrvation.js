@@ -1,34 +1,13 @@
 import React, { useState } from "react"; 
 import './style.css'
-import {useSelector,useDispatch} from 'react-redux'
+import {useSelector} from 'react-redux'
 import F1 from "./f1"; 
 import F2 from "./f2"; 
 import F3 from "./f3"; 
 import F4 from "./F4"; 
  
-export default function Resrvation() { 
-  const displatch=useDispatch()
+export default function Resrvation() {
   const st=useSelector(state=>state.st)
-  function f1(){
-    displatch({
-      type:"f1"
-    })
-  }
-  function f2(){
-    displatch({
-      type:"f2"
-    })
-  }
-  function f3(){
-    displatch({
-      type:"f3"
-    })
-  }
-  function f4(){
-    displatch({
-      type:"f4"
-    })
-  }
   return ( 
     <div className="reservation"> 
       <div className="nav"> 
@@ -38,16 +17,16 @@ export default function Resrvation() {
         <div className={st==="f4"?'active':''}><h2>Payment</h2></div> 
       </div> 
       {st === "f1" && ( 
-        <F1 onLinkClick={f2} /> 
+        <F1/> 
       )} 
       {st === "f2" && ( 
-        <F2 onBackButtonClick={f3} /> 
+        <F2/> 
       )}
       {st === "f3" && ( 
-        <F3 onBackButtonClick={f4} /> 
+        <F3/> 
       )}
       {st === "f4" && ( 
-        <F4 /> 
+        <F4/> 
       )}
     </div> 
   ); 

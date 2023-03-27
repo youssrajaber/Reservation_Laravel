@@ -18,6 +18,10 @@ export default function Nav() {
                     </div>
                 </section>
             </nav>
+            <div className='mobile-header'>
+                <Link to="/Landing" className="nav-brand"><img className='logo' src={logo} alt="" /></Link>
+                <i></i>
+            </div>
         </div>
     )
 }

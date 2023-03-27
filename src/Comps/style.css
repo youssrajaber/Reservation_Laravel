@@ -904,6 +904,7 @@ nav .logo{
     display: flex;
     align-items: center;
     width: 100%;
+    background-color: white;
 }
 .ticket article span{
     margin-right: auto;
@@ -923,6 +924,10 @@ nav .logo{
     font-size: 3em;
     text-align: start;
 }
+.ticket .vertical strong{
+    
+    font-size: 1.2em;
+}
 .ticket article div strong:last-child{
     text-align: end;
     margin-right: 5px;
@@ -932,13 +937,25 @@ nav .logo{
 }
 .ticket article .flight{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 20px 1fr;
     justify-content: space-between;
     align-items: center;
 }
 .ticket article img{
     width:  20px;
     margin: auto;
+}
+.ticket button{
+    margin:auto;
+    font-size: 1.8em;
+    color:white;
+    margin-top: 15px;
+    width: fit-content;
+    border:none;
+    background-color:#1882fc;
+    padding-inline: 15px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /* ----------------------media query-------------------- */

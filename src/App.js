@@ -3,9 +3,9 @@ import './App.css';
 import Nav from './Comps/nav';
 import Landing from './Comps/hero';
 import Sign from './Comps/signin';
-import FF from './Comps/FF';
+import FF from './Comps/F5';
 import Resrvation from './Comps/resrvation';
-import { Routes,Route,Navigate } from 'react-router-dom';
+import { Routes,Route,Navigate} from 'react-router-dom';
 
 function App() {
   return (
@@ -16,11 +16,11 @@ function App() {
         <Route path='/Landing' element={<Landing/>}>home</Route>
         <Route path='/Sign' element={<Sign/>}></Route>
         <Route path='/Res' element={<Resrvation/>}></Route>
-        <Route path='/ff' element={<FF/>}></Route>
+        <Route path='/f5' element={<FF/>}></Route>
         <Route path='*' element={<Navigate to={"/"}/>}></Route>
       </Routes>
     </div>
   );
 }
 
-export default App;
+export default App; 

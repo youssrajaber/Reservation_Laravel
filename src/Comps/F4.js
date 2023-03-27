@@ -1,42 +1,79 @@
-import React , {useState} from'react' 
-import { Link } from 'react-router-dom'
-import './style.css'
-import {useSelector,useDispatch} from 'react-redux'
-export default function F3() {  
-  const st=useSelector(state=>state.st)
-  const displatch=useDispatch()
-  function f4(){
-    displatch({
-      type:"f4"
-    })
+import React, { useState,useEffect } from 'react'; 
+import axios from 'axios'
+import { Link } from 'react-router-dom'; 
+import './style.css'; 
+import { useSelector, useDispatch } from 'react-redux';
+
+export default function F3() {
+  const [cardNumber, setCardNumber] = useState('')
+  const [cardName, setCardName] = useState('')
+  const [expiryDate, setExpiryDate] = useState('')
+  const [cvv, setCvv] = useState('');
+  const dispatch = useDispatch();
+  const f3 = useSelector(state => state.f3); 
+  const f2 = useSelector(state => state.f2); 
+
+  function handleSubmit(e) {
+    e.preventDefault();
   }
-  return ( 
+  function f4(){
+    if(cardNumber=="" && cardName=="" && expiryDate=="" && cvv=="")
+    {
+      alert('all fields are required')
+    }
+  }
+
+  return (
     <div className='f1'> 
-      <form action="#" onSubmit={(e)=>{e.preventDefault()}}> 
-        
+      <form onSubmit={handleSubmit} method="post">
         <div>
-            <label For="from">Card Number:</label> 
-            <input type="text" name="cn"  id="from"/>
-        </div>
+          <label htmlFor="from">Card Number:</label> 
+          <input 
+            type="text" 
+            name="cn" 
+            id="from"
+            value={cardNumber}
+            onChange={(e) => setCardNumber(e.target.value)}
+          />
+        </div> 
+        <div> 
+          <label htmlFor="To">Card Name:</label> 
+          <input 
+            type="text" 
+            name="cnm" 
+            id="To" 
+            value={cardName}
+            onChange={(e) => setCardName(e.target.value)}
+          /> 
+        </div> 
+        <div> 
+          <label htmlFor="going">Expiry Date:</label> 
+          <input 
+            type="date" 
+            name="exd" 
+            id="going" 
+            value={expiryDate}
+            onChange={(e) => setExpiryDate(e.target.value)}
+          /> 
+        </div> 
+        <div> 
+          <label htmlFor="ad">CVV:</label> 
+          <input 
+            type="text" 
+            name="cvv" 
+            id="ad" 
+            value={cvv}
+            onChange={(e) => setCvv(e.target.value)}
+          /> 
+        </div> 
 
-        <div>
-            <label For="To">Card Name:</label> 
-            <input type="text" name="cnm" id="To" />
-        </div>
-
-        <div>
-            <label For="going">Expiry Date:</label> 
-            <input type="date" name="exd" id="going" />
-        </div>
-        <div>
-            <label for="ad">CVV:</label> 
-            <input type="text" name="cvv" id="ad" />
-        </div>
-        <div>
-          <label htmlFor="">&nbsp;</label>
-          <Link to="/ff"><button type="button" onClick={f4}>Done</button> </Link>
-        </div>
+        <div> 
+          <label htmlFor="">&nbsp;</label> 
+          <Link to="/f5">
+            <button type="submit" onClick={f4}>Done</button> 
+          </Link> 
+        </div> 
       </form> 
     </div> 
-  ) 
+  );
 }

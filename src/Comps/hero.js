@@ -7,7 +7,6 @@ import w from '../img/wheels.jpg'
 import hk from '../img/Hongkong.jpg'
 import pl from '../img/pilot.jpg'
 import { Link } from 'react-router-dom'
-import {useSelector,useDispatch} from 'react-redux'
 
 
 export default function Landing() {
@@ -217,7 +216,7 @@ export default function Landing() {
                     <div  className="content">
                         <span>
                             <p>
-                                " <br />&nbsp; iste in quibusdam veniam, placeat oluta quibusdam veniam
+                                " <br />&nbsp; iste in quibusdam veniam, placeat oluta quibusdam veniam"
                                 odit repellendus autem voluptatem est Provident!
                                 Hic tenetur soluta quibusdam veniam, voluptatem est Provident placeat odit 
                             </p>
@@ -259,11 +258,11 @@ export default function Landing() {
                     <header>
                         <i className="op">Reserve</i>
                         <h2 className="h2s upanim hidden">
-                            It's time to Discover the world <br /> Find and book great <br />
+                            Its time to Discover the world <br /> Find and book great <br />
                             experience
                          </h2>
                     </header>
-                        <button className="upanim1">Explore Flights</button>
+                        <a href="/res"><button className="upanim1">Explore Flights</button></a>
                 </div>
                 <span>
                     <div className="company">
