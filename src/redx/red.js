@@ -69,6 +69,9 @@ export default function Red(state=initState,action){
         }
         return{f1:T,st:"f2"}
     }
+    if(action.type=="f1"){
+        return{st:"f1"}
+    }
     
     return state
 

@@ -14,80 +14,80 @@ export default function Landing() {
     const ref2=useRef()
     const ref3=useRef()
     const screentop=window.innerHeight
-    window.addEventListener('scroll',()=>{
-        // counting
-        let el1t=ref1.current.getBoundingClientRect().top
-        if(el1t<screentop){ 
-            for(var i=0;i>=12000;i++){
-                el1t.current.innerText="+"+i
-            }
-        }
-        let el2t=ref1.current.getBoundingClientRect().top
-        console.log(el2t.current)
-        if(el1t<screentop){ 
-            for(var i=0;i>=73;i++){
-                el2t.current.innerText="+"+i
-                el2t.current.style.color="red"
-            }
-        }
-        let el3t=ref1.current.getBoundingClientRect().top
-        if(el1t<screentop){ 
-            for(var i=0;i>=245;i++){
-                el3t.current.innerText="+"+i
-            }
-        }
+    // window.addEventListener('scroll',()=>{
+    //     // counting
+    //     let el1t=ref1.current.getBoundingClientRect().top
+    //     if(el1t<screentop){ 
+    //         for(var i=0;i>=12000;i++){
+    //             el1t.current.innerText="+"+i
+    //         }
+    //     }
+    //     let el2t=ref1.current.getBoundingClientRect().top
+    //     console.log(el2t.current)
+    //     if(el1t<screentop){ 
+    //         for(var i=0;i>=73;i++){
+    //             el2t.current.innerText="+"+i
+    //             el2t.current.style.color="red"
+    //         }
+    //     }
+    //     let el3t=ref1.current.getBoundingClientRect().top
+    //     if(el1t<screentop){ 
+    //         for(var i=0;i>=245;i++){
+    //             el3t.current.innerText="+"+i
+    //         }
+    //     }
         
-        // animation
-        const upanimaton=document.querySelectorAll('.upanim')
-        for(var el of upanimaton){
-            let top =el.getBoundingClientRect().top
-            if(top<screentop){
-                el.classList.add('up')
-                el.classList.remove('hidden')  
-            }
-            else{
-                el.classList.remove('up')  
-                el.classList.add('hidden')  
-            }
-        }
+    //     // animation
+    //     const upanimaton=document.querySelectorAll('.upanim')
+    //     for(var el of upanimaton){
+    //         let top =el.getBoundingClientRect().top
+    //         if(top<screentop){
+    //             el.classList.add('up')
+    //             el.classList.remove('hidden')  
+    //         }
+    //         else{
+    //             el.classList.remove('up')  
+    //             el.classList.add('hidden')  
+    //         }
+    //     }
 
-        const upanimaton1=document.querySelectorAll('.upanim1')
-        for(var el of upanimaton1){
-            let top =el.getBoundingClientRect().top
-            if(top<screentop){
-                el.classList.add('up1')
-                el.classList.remove('hidden')   
-            }
-            else{
-                el.classList.remove('up1')
-                el.classList.add('hidden')   
-            }
-        }
+    //     const upanimaton1=document.querySelectorAll('.upanim1')
+    //     for(var el of upanimaton1){
+    //         let top =el.getBoundingClientRect().top
+    //         if(top<screentop){
+    //             el.classList.add('up1')
+    //             el.classList.remove('hidden')   
+    //         }
+    //         else{
+    //             el.classList.remove('up1')
+    //             el.classList.add('hidden')   
+    //         }
+    //     }
         
-        const upanimaton3=document.querySelectorAll('.op')
-        for(var el of upanimaton3){
-            let top =el.getBoundingClientRect().top
-            if(top<screentop){
-                el.classList.add('opc')
-                el.classList.remove('hidden')   
-            }
-            else{
-                el.classList.remove('opc')
-                el.classList.add('hidden')   
-            }
-        }
+    //     const upanimaton3=document.querySelectorAll('.op')
+    //     for(var el of upanimaton3){
+    //         let top =el.getBoundingClientRect().top
+    //         if(top<screentop){
+    //             el.classList.add('opc')
+    //             el.classList.remove('hidden')   
+    //         }
+    //         else{
+    //             el.classList.remove('opc')
+    //             el.classList.add('hidden')   
+    //         }
+    //     }
 
-        const el1 =document.querySelector('.simg')
-        let top =el1.getBoundingClientRect().top
-        if(top<screentop){
-            el1.classList.add('wid')
-            el1.classList.remove('wh')   
-        }
-        else{
-            el1.classList.remove('wid')
-            el1.classList.add('wh')   
-        }
-    })
+    //     const el1 =document.querySelector('.simg')
+    //     let top =el1.getBoundingClientRect().top
+    //     if(top<screentop){
+    //         el1.classList.add('wid')
+    //         el1.classList.remove('wh')   
+    //     }
+    //     else{
+    //         el1.classList.remove('wid')
+    //         el1.classList.add('wh')   
+    //     }
+    // })
   
     return (
       <div>

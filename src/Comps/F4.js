@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'; 
 import axios from 'axios'
-import { Link } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; 
 import './style.css'; 
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -12,14 +12,18 @@ export default function F3() {
   const dispatch = useDispatch();
   const f3 = useSelector(state => state.f3); 
   const f2 = useSelector(state => state.f2); 
+  const navigate=useNavigate()
 
   function handleSubmit(e) {
     e.preventDefault();
   }
   function f4(){
-    if(cardNumber=="" && cardName=="" && expiryDate=="" && cvv=="")
+    if(cardNumber=="" || cardName=="" || expiryDate=="" || cvv=="")
     {
       alert('all fields are required')
+    }
+    else{
+      navigate('/f5')
     }
   }
 
@@ -69,9 +73,7 @@ export default function F3() {
 
         <div> 
           <label htmlFor="">&nbsp;</label> 
-          <Link to="/f5">
             <button type="submit" onClick={f4}>Done</button> 
-          </Link> 
         </div> 
       </form> 
     </div> 

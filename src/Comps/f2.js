@@ -6,7 +6,7 @@ export default function F2(){
   
   const [ec,setec]=useState([])
   // const [hours, setHours] = useState(null)
-  // const [mins, setMins] = useState(null)
+  const [isload, setload] = useState(true)
   const v=useSelector(state=>state.f1)
   const displatch=useDispatch()
   
@@ -17,6 +17,7 @@ export default function F2(){
         to: v.to
       }
     }).then(res => {
+      setload(false)
       setec(res.data)
     })
   }, [])
@@ -86,13 +87,25 @@ function f3(Scity,Ecity,fsh,feh,duration,price,date,classs){
     payload:[Scity,Ecity,fsh,feh,duration,price,date,classs]
   })
 }
-
+function f1(){
+  displatch({
+    type:"f1"
+  })
+}
   
   return (
     <div className='f2'>
       <h2>List Of Flights available</h2>
       <article>
-        {Object.keys(sc).length>0 ? sc : (<p>No flights available</p>)}
+        {/* {Object.keys(sc).length>0 ? sc : (<p>No flights available</p>)} */}
+        {isload ?(<p>Loading...</p>) : Object.keys(sc).length>0 ? sc : (
+        <p>
+          No flights available
+          <br /><br />
+          <a href="#" onClick={f1} style={{ textDecoration:"none",color:"##1882fc" }}>Modify flight</a>
+        </p>
+        
+        )}
       </article>
       
     </div>
